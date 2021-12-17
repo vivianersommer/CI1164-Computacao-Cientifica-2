@@ -117,7 +117,7 @@ Region NEWTON, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.365544 |
+| RDTSC Runtime [s] |   0.345209 |
 |     call count    |          1 |
 +-------------------+------------+
 
@@ -125,32 +125,32 @@ Region NEWTON, Group 1: FLOPS_DP
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
 |             INSTR_RETIRED_ANY            |  FIXC0  | 1090822000 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  535283500 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  448154400 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  511388800 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  425303100 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     218140 |
-| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      21263 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     218168 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      21291 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3655 |
-| Runtime unhalted [s] |     0.1843 |
-|      Clock [MHz]     |  3468.5378 |
-|          CPI         |     0.4907 |
-|     DP [MFLOP/s]     |     0.8294 |
-|   AVX DP [MFLOP/s]   |     0.2327 |
-|   Packed [MUOPS/s]   |     0.0582 |
-|   Scalar [MUOPS/s]   |     0.5968 |
-|  Vectorization ratio |     8.8817 |
+|  Runtime (RDTSC) [s] |     0.3452 |
+| Runtime unhalted [s] |     0.1761 |
+|      Clock [MHz]     |  3491.7560 |
+|          CPI         |     0.4688 |
+|     DP [MFLOP/s]     |     0.8787 |
+|   AVX DP [MFLOP/s]   |     0.2467 |
+|   Packed [MUOPS/s]   |     0.0617 |
+|   Scalar [MUOPS/s]   |     0.6320 |
+|  Vectorization ratio |     8.8913 |
 +----------------------+------------+
 
 Region DERIVADA, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.126319 |
+| RDTSC Runtime [s] |   0.115421 |
 |     call count    |          1 |
 +-------------------+------------+
 
@@ -158,8 +158,8 @@ Region DERIVADA, Group 1: FLOPS_DP
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
 |             INSTR_RETIRED_ANY            |  FIXC0  |   55944180 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   42398920 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   38194010 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   41431240 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   34456320 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
 |    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       2058 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |         32 |
@@ -168,14 +168,14 @@ Region DERIVADA, Group 1: FLOPS_DP
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1263 |
-| Runtime unhalted [s] |     0.0146 |
-|      Clock [MHz]     |  3223.6641 |
-|          CPI         |     0.7579 |
-|     DP [MFLOP/s]     |     0.0173 |
-|   AVX DP [MFLOP/s]   |     0.0010 |
+|  Runtime (RDTSC) [s] |     0.1154 |
+| Runtime unhalted [s] |     0.0143 |
+|      Clock [MHz]     |  3491.8073 |
+|          CPI         |     0.7406 |
+|     DP [MFLOP/s]     |     0.0189 |
+|   AVX DP [MFLOP/s]   |     0.0011 |
 |   Packed [MUOPS/s]   |     0.0003 |
-|   Scalar [MUOPS/s]   |     0.0163 |
+|   Scalar [MUOPS/s]   |     0.0178 |
 |  Vectorization ratio |     1.5311 |
 +----------------------+------------+
 
@@ -183,7 +183,7 @@ Region JACOBIANA, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.222200 |
+| RDTSC Runtime [s] |   0.213238 |
 |     call count    |         20 |
 +-------------------+------------+
 
@@ -191,32 +191,32 @@ Region JACOBIANA, Group 1: FLOPS_DP
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
 |             INSTR_RETIRED_ANY            |  FIXC0  | 1004173000 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  476541000 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  396339700 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  454288400 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  377810200 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     204912 |
-| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      20432 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     204939 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      20459 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2222 |
-| Runtime unhalted [s] |     0.1641 |
-|      Clock [MHz]     |  3491.5876 |
-|          CPI         |     0.4746 |
-|     DP [MFLOP/s]     |     1.2900 |
-|   AVX DP [MFLOP/s]   |     0.3678 |
-|   Packed [MUOPS/s]   |     0.0920 |
-|   Scalar [MUOPS/s]   |     0.9222 |
-|  Vectorization ratio |     9.0670 |
+|  Runtime (RDTSC) [s] |     0.2132 |
+| Runtime unhalted [s] |     0.1564 |
+|      Clock [MHz]     |  3491.7987 |
+|          CPI         |     0.4524 |
+|     DP [MFLOP/s]     |     1.3449 |
+|   AVX DP [MFLOP/s]   |     0.3838 |
+|   Packed [MUOPS/s]   |     0.0959 |
+|   Scalar [MUOPS/s]   |     0.9611 |
+|  Vectorization ratio |     9.0768 |
 +----------------------+------------+
 
 Region GAUSS, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.000020 |
+| RDTSC Runtime [s] |   0.000024 |
 |     call count    |         20 |
 +-------------------+------------+
 
@@ -224,8 +224,8 @@ Region GAUSS, Group 1: FLOPS_DP
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
 |             INSTR_RETIRED_ANY            |  FIXC0  |     102946 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |     264109 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |     220704 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |     271264 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |     224939 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
 |    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       5180 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
@@ -234,14 +234,14 @@ Region GAUSS, Group 1: FLOPS_DP
 +----------------------+--------------+
 |        Metric        |  HWThread 3  |
 +----------------------+--------------+
-|  Runtime (RDTSC) [s] | 2.049172e-05 |
+|  Runtime (RDTSC) [s] | 2.361981e-05 |
 | Runtime unhalted [s] |       0.0001 |
-|      Clock [MHz]     |    3475.0674 |
-|          CPI         |       2.5655 |
-|     DP [MFLOP/s]     |     252.7850 |
+|      Clock [MHz]     |    3502.0201 |
+|          CPI         |       2.6350 |
+|     DP [MFLOP/s]     |     219.3074 |
 |   AVX DP [MFLOP/s]   |            0 |
 |   Packed [MUOPS/s]   |            0 |
-|   Scalar [MUOPS/s]   |     252.7850 |
+|   Scalar [MUOPS/s]   |     219.3074 |
 |  Vectorization ratio |            0 |
 +----------------------+--------------+
 

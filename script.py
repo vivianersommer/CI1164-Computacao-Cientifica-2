@@ -3,17 +3,17 @@ import subprocess
 import pandas as pd
 
 
-N = [10 , 32, 50, 64] 
-# 100, 128, 200, 250, 256, 300, 400, 512, 600, 1000, 1024, 2000, 2048, 3000, 4096]
+N = [10 , 32, 50, 64, 100, 128] 
+#200, 250, 256, 300, 400, 512, 600, 1000, 1024, 2000, 2048, 3000, 4096]
 
 print("Compilando T1 ...")
-if not os.path.exists("../ICC/T1/newtonSNL"):
-    os.chdir("../ICC/T1/")
-    os.system("make")
+if not os.path.exists("../vods18vrs18/T1/newtonSNL"):
+    os.chdir("../vods18vrs18/T1/")
+    os.system("make avx")
 
 print("Compilando T2 ...")
-if not os.path.exists("../ICC/T2/newtonSNL"):
-    os.chdir("../ICC/T2/")
+if not os.path.exists("../vods18vrs18/T2/newtonSNL"):
+    os.chdir("../vods18vrs18/T2/")
     os.system("make avx")
 
 if os.path.isdir("./sl"):
@@ -94,9 +94,9 @@ for value in N:
     print("Executando likwid-perfctr para N " + str(value) + " e -g L3 ...")
     
     ## COLETANDO NORMAL
-    os.chdir("../ICC/T1/")
+    os.chdir("../vods18vrs18/T1")
     sample_out = "../sl/sample_out_l3_" + str(value)+".dat"
-    os.system("likwid-perfctr -C 3 -g L3 -m ./newtonSNL -o text.txt < " + sample_in + " > " + sample_out)
+    os.system("likwid-perfctr -C 3 -g L3 -m ./newtonSNL -o saida_"+ str(value) +".txt < " + sample_in + " > " + sample_out)
     result = subprocess.Popen(["fgrep", " RDTSC Runtime ", sample_out], stdout=subprocess.PIPE)
     stdout,stderr = result.communicate()
     stdout = str(stdout)
@@ -114,7 +114,7 @@ for value in N:
     ## COLETANDO OTIMIZADO
     os.chdir("../T2/")
     sample_out2 = "../sl/sample_out_l3_opt" + str(value)+".dat"
-    os.system("likwid-perfctr -C 3 -g L3 -m ./newtonSNL -o text.txt <" + sample_in + " > " + sample_out2)
+    os.system("likwid-perfctr -C 3 -g L3 -m ./newtonSNL -o saida_"+ str(value) +"_opt.txt <" + sample_in + " > " + sample_out2)
     result = subprocess.Popen(["fgrep", " RDTSC Runtime ", sample_out2], stdout=subprocess.PIPE)
     stdout,stderr = result.communicate()
     stdout = str(stdout)
@@ -171,7 +171,7 @@ for value in N:
     os.chdir("../T1/")
     sample_out = "../sl/sample_out_l2cache_" + str(value)+".dat"
     print("Executando likwid-perfctr para N " + str(value) + " e -g L2CACHE ...")
-    os.system("likwid-perfctr -C 3 -g L2CACHE -m ./newtonSNL -o text.txt <" + sample_in + " > " + sample_out)
+    os.system("likwid-perfctr -C 3 -g L2CACHE -m ./newtonSNL -o saida_" + str(value) + ".txt <" + sample_in + " > " + sample_out)
 
     result = subprocess.Popen(["fgrep", " L2 miss ratio ", sample_out], stdout=subprocess.PIPE)
     stdout,stderr = result.communicate()
@@ -190,7 +190,7 @@ for value in N:
     ## COLETANDO OTIMIZADO
     os.chdir("../T2/")
     sample_out2 = "../sl/sample_out_l2cache_opt" + str(value)+".dat"
-    os.system("likwid-perfctr -C 3 -g L2CACHE -m ./newtonSNL -o text.txt <" + sample_in + " > " + sample_out2)
+    os.system("likwid-perfctr -C 3 -g L2CACHE -m ./newtonSNL -o saida_"+ str(value) +"_opt.txt <" + sample_in + " > " + sample_out2)
     result = subprocess.Popen(["fgrep", " L2 miss ratio ", sample_out2], stdout=subprocess.PIPE)
     stdout,stderr = result.communicate()
     stdout = str(stdout)
@@ -213,7 +213,7 @@ for value in N:
     os.chdir("../T1")
     sample_out = "../sl/sample_out_flops_" + str(value)+".dat"
     print("Executando likwid-perfctr para N " + str(value) + " e -g FLOPS_DP ...")
-    os.system("likwid-perfctr -C 3 -g FLOPS_DP -m ./newtonSNL -o text.txt <" + sample_in + " > " + sample_out)
+    os.system("likwid-perfctr -C 3 -g FLOPS_DP -m ./newtonSNL -o saida_"+ str(value) +".txt <" + sample_in + " > " + sample_out)
         
     result = subprocess.Popen(["fgrep", "DP [MFLOP/s]", sample_out], stdout=subprocess.PIPE)
     stdout,stderr = result.communicate()
@@ -236,7 +236,7 @@ for value in N:
     ## COLETANDO OTIMIZADO
     os.chdir("../T2")
     sample_out2 = "../sl/sample_out_flops_opt" + str(value)+".dat"
-    os.system("likwid-perfctr -C 3 -g FLOPS_DP -m ./newtonSNL -o text.txt <" + sample_in + " > " + sample_out2)
+    os.system("likwid-perfctr -C 3 -g FLOPS_DP -m ./newtonSNL -o saida_"+ str(value) +"_opt.txt <" + sample_in + " > " + sample_out2)
     result = subprocess.Popen(["fgrep", "DP [MFLOP/s]", sample_out2], stdout=subprocess.PIPE)
     stdout,stderr = result.communicate()
     stdout = str(stdout)

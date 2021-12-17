@@ -23,78 +23,78 @@ Region NEWTON, Group 1: L2CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.042330 |
+| RDTSC Runtime [s] |   0.040658 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +-----------------------+---------+------------+
 |         Event         | Counter | HWThread 3 |
 +-----------------------+---------+------------+
-|   INSTR_RETIRED_ANY   |  FIXC0  |  110472100 |
-| CPU_CLK_UNHALTED_CORE |  FIXC1  |   52464540 |
-|  CPU_CLK_UNHALTED_REF |  FIXC2  |   43620980 |
-| L2_TRANS_ALL_REQUESTS |   PMC0  |    2322726 |
-|     L2_RQSTS_MISS     |   PMC1  |     562345 |
+|   INSTR_RETIRED_ANY   |  FIXC0  |  109879900 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |   51506590 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |   42843440 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |    2131855 |
+|     L2_RQSTS_MISS     |   PMC1  |     471439 |
 +-----------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0423 |
-| Runtime unhalted [s] |     0.0181 |
-|      Clock [MHz]     |  3492.6861 |
-|          CPI         |     0.4749 |
-|    L2 request rate   |     0.0210 |
-|     L2 miss rate     |     0.0051 |
-|     L2 miss ratio    |     0.2421 |
+|  Runtime (RDTSC) [s] |     0.0407 |
+| Runtime unhalted [s] |     0.0177 |
+|      Clock [MHz]     |  3491.0085 |
+|          CPI         |     0.4688 |
+|    L2 request rate   |     0.0194 |
+|     L2 miss rate     |     0.0043 |
+|     L2 miss ratio    |     0.2211 |
 +----------------------+------------+
 
 Region DERIVADAS, Group 1: L2CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.012721 |
+| RDTSC Runtime [s] |   0.010883 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +-----------------------+---------+------------+
 |         Event         | Counter | HWThread 3 |
 +-----------------------+---------+------------+
-|   INSTR_RETIRED_ANY   |  FIXC0  |    5689180 |
-| CPU_CLK_UNHALTED_CORE |  FIXC1  |    4780395 |
-|  CPU_CLK_UNHALTED_REF |  FIXC2  |    3970857 |
-| L2_TRANS_ALL_REQUESTS |   PMC0  |     892380 |
-|     L2_RQSTS_MISS     |   PMC1  |     299977 |
+|   INSTR_RETIRED_ANY   |  FIXC0  |    5688324 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |    4072262 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |    3391630 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |     767462 |
+|     L2_RQSTS_MISS     |   PMC1  |     212553 |
 +-----------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0127 |
-| Runtime unhalted [s] |     0.0016 |
-|      Clock [MHz]     |  3495.9776 |
-|          CPI         |     0.8403 |
-|    L2 request rate   |     0.1569 |
-|     L2 miss rate     |     0.0527 |
-|     L2 miss ratio    |     0.3362 |
+|  Runtime (RDTSC) [s] |     0.0109 |
+| Runtime unhalted [s] |     0.0014 |
+|      Clock [MHz]     |  3486.5804 |
+|          CPI         |     0.7159 |
+|    L2 request rate   |     0.1349 |
+|     L2 miss rate     |     0.0374 |
+|     L2 miss ratio    |     0.2770 |
 +----------------------+------------+
 
 Region JACOBIANA, Group 1: L2CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.020069 |
+| RDTSC Runtime [s] |   0.020067 |
 |     call count    |         20 |
 +-------------------+------------+
 
 +-----------------------+---------+------------+
 |         Event         | Counter | HWThread 3 |
 +-----------------------+---------+------------+
-|   INSTR_RETIRED_ANY   |  FIXC0  |   94578240 |
-| CPU_CLK_UNHALTED_CORE |  FIXC1  |   42466030 |
-|  CPU_CLK_UNHALTED_REF |  FIXC2  |   35309620 |
-| L2_TRANS_ALL_REQUESTS |   PMC0  |    1164897 |
-|     L2_RQSTS_MISS     |   PMC1  |     194156 |
+|   INSTR_RETIRED_ANY   |  FIXC0  |   94445660 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |   42373770 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |   35241490 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |    1100094 |
+|     L2_RQSTS_MISS     |   PMC1  |     190109 |
 +-----------------------+---------+------------+
 
 +----------------------+------------+
@@ -102,40 +102,40 @@ Region JACOBIANA, Group 1: L2CACHE
 +----------------------+------------+
 |  Runtime (RDTSC) [s] |     0.0201 |
 | Runtime unhalted [s] |     0.0146 |
-|      Clock [MHz]     |  3492.5106 |
-|          CPI         |     0.4490 |
-|    L2 request rate   |     0.0123 |
-|     L2 miss rate     |     0.0021 |
-|     L2 miss ratio    |     0.1667 |
+|      Clock [MHz]     |  3491.5260 |
+|          CPI         |     0.4487 |
+|    L2 request rate   |     0.0116 |
+|     L2 miss rate     |     0.0020 |
+|     L2 miss ratio    |     0.1728 |
 +----------------------+------------+
 
 Region GAUSS, Group 1: L2CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.000063 |
+| RDTSC Runtime [s] |   0.000023 |
 |     call count    |         20 |
 +-------------------+------------+
 
 +-----------------------+---------+------------+
 |         Event         | Counter | HWThread 3 |
 +-----------------------+---------+------------+
-|   INSTR_RETIRED_ANY   |  FIXC0  |     643474 |
-| CPU_CLK_UNHALTED_CORE |  FIXC1  |     374245 |
-|  CPU_CLK_UNHALTED_REF |  FIXC2  |     311817 |
-| L2_TRANS_ALL_REQUESTS |   PMC0  |      24445 |
-|     L2_RQSTS_MISS     |   PMC1  |       5878 |
+|   INSTR_RETIRED_ANY   |  FIXC0  |     215346 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |     242487 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |     201102 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |      26177 |
+|     L2_RQSTS_MISS     |   PMC1  |       6124 |
 +-----------------------+---------+------------+
 
-+----------------------+------------+
-|        Metric        | HWThread 3 |
-+----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0001 |
-| Runtime unhalted [s] |     0.0001 |
-|      Clock [MHz]     |  3485.3414 |
-|          CPI         |     0.5816 |
-|    L2 request rate   |     0.0380 |
-|     L2 miss rate     |     0.0091 |
-|     L2 miss ratio    |     0.2405 |
-+----------------------+------------+
++----------------------+--------------+
+|        Metric        |  HWThread 3  |
++----------------------+--------------+
+|  Runtime (RDTSC) [s] | 2.334395e-05 |
+| Runtime unhalted [s] |       0.0001 |
+|      Clock [MHz]     |    3501.4225 |
+|          CPI         |       1.1260 |
+|    L2 request rate   |       0.1216 |
+|     L2 miss rate     |       0.0284 |
+|     L2 miss ratio    |       0.2339 |
++----------------------+--------------+
 
