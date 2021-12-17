@@ -1,0 +1,153 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+CPU type:	Intel Kabylake processor
+CPU clock:	2.90 GHz
+--------------------------------------------------------------------------------
+ENTREI PRA BAG 0
+DIMENSAO: 10
+cheguei x0
+sai x0
+EPSILON = 0.000000e+00
+ITERACAO = 20
+cheguei newton
+CHEGUEI
+SAI
+CHEGUEI INC
+SAI INC
+CHEGUEI DERIVADA
+SAI DERIVADA
+sai newton
+SAI DA BAG 0
+--------------------------------------------------------------------------------
+Region NEWTON, Group 1: L3
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.058935 |
+|     call count    |          1 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  |  110475000 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |   54297050 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |   52853160 |
+|    L2_LINES_IN_ALL    |   PMC0  |     516110 |
+|     L2_TRANS_L2_WB    |   PMC1  |     107038 |
++-----------------------+---------+------------+
+
++-------------------------------+------------+
+|             Metric            | HWThread 3 |
++-------------------------------+------------+
+|      Runtime (RDTSC) [s]      |     0.0589 |
+|      Runtime unhalted [s]     |     0.0187 |
+|          Clock [MHz]          |  2983.2538 |
+|              CPI              |     0.4915 |
+|  L3 load bandwidth [MBytes/s] |   560.4703 |
+|  L3 load data volume [GBytes] |     0.0330 |
+| L3 evict bandwidth [MBytes/s] |   116.2380 |
+| L3 evict data volume [GBytes] |     0.0069 |
+|    L3 bandwidth [MBytes/s]    |   676.7083 |
+|    L3 data volume [GBytes]    |     0.0399 |
++-------------------------------+------------+
+
+Region DERIVADAS, Group 1: L3
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.025783 |
+|     call count    |          1 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  |    5688852 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |    4412695 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |    8177301 |
+|    L2_LINES_IN_ALL    |   PMC0  |     253573 |
+|     L2_TRANS_L2_WB    |   PMC1  |      15791 |
++-----------------------+---------+------------+
+
++-------------------------------+------------+
+|             Metric            | HWThread 3 |
++-------------------------------+------------+
+|      Runtime (RDTSC) [s]      |     0.0258 |
+|      Runtime unhalted [s]     |     0.0015 |
+|          Clock [MHz]          |  1567.0356 |
+|              CPI              |     0.7757 |
+|  L3 load bandwidth [MBytes/s] |   629.4240 |
+|  L3 load data volume [GBytes] |     0.0162 |
+| L3 evict bandwidth [MBytes/s] |    39.1967 |
+| L3 evict data volume [GBytes] |     0.0010 |
+|    L3 bandwidth [MBytes/s]    |   668.6207 |
+|    L3 data volume [GBytes]    |     0.0172 |
++-------------------------------+------------+
+
+Region JACOBIANA, Group 1: L3
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.022375 |
+|     call count    |         20 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  |   94580710 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |   44549020 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |   39813840 |
+|    L2_LINES_IN_ALL    |   PMC0  |     193649 |
+|     L2_TRANS_L2_WB    |   PMC1  |      74801 |
++-----------------------+---------+------------+
+
++-------------------------------+------------+
+|             Metric            | HWThread 3 |
++-------------------------------+------------+
+|      Runtime (RDTSC) [s]      |     0.0224 |
+|      Runtime unhalted [s]     |     0.0153 |
+|          Clock [MHz]          |  3249.2941 |
+|              CPI              |     0.4710 |
+|  L3 load bandwidth [MBytes/s] |   553.9033 |
+|  L3 load data volume [GBytes] |     0.0124 |
+| L3 evict bandwidth [MBytes/s] |   213.9568 |
+| L3 evict data volume [GBytes] |     0.0048 |
+|    L3 bandwidth [MBytes/s]    |   767.8601 |
+|    L3 data volume [GBytes]    |     0.0172 |
++-------------------------------+------------+
+
+Region GAUSS, Group 1: L3
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.000070 |
+|     call count    |         20 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  |     643440 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |     396060 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |     350779 |
+|    L2_LINES_IN_ALL    |   PMC0  |       6258 |
+|     L2_TRANS_L2_WB    |   PMC1  |       1423 |
++-----------------------+---------+------------+
+
++-------------------------------+------------+
+|             Metric            | HWThread 3 |
++-------------------------------+------------+
+|      Runtime (RDTSC) [s]      |     0.0001 |
+|      Runtime unhalted [s]     |     0.0001 |
+|          Clock [MHz]          |  3278.7804 |
+|              CPI              |     0.6155 |
+|  L3 load bandwidth [MBytes/s] |  5748.9032 |
+|  L3 load data volume [GBytes] |     0.0004 |
+| L3 evict bandwidth [MBytes/s] |  1307.2370 |
+| L3 evict data volume [GBytes] |     0.0001 |
+|    L3 bandwidth [MBytes/s]    |  7056.1402 |
+|    L3 data volume [GBytes]    |     0.0005 |
++-------------------------------+------------+
+

@@ -1,0 +1,235 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+CPU type:	Intel Kabylake processor
+CPU clock:	2.90 GHz
+--------------------------------------------------------------------------------
+ENTREI PARA BAG 0
+MAXIMO: 50
+EPSILON = 0.000000
+ITERACAO = 20
+ENTREI NO NEWTON
+ENTREI NA DERIVADA
+SAI DA DERIVADA
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+ENTREI NA ANALIZE_JACOBIANA
+SAI DA ANALIZE_JACOBIANA
+
+Entrei no Gauss
+Sai do Gauss
+SAI DO NEWTON
+SAI PARA BAG 0
+--------------------------------------------------------------------------------
+Region NEWTON, Group 1: L2CACHE
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.949694 |
+|     call count    |          1 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  | 2794744000 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  | 1432585000 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  | 1199367000 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |   79881610 |
+|     L2_RQSTS_MISS     |   PMC1  |   17193050 |
++-----------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 3 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.9497 |
+| Runtime unhalted [s] |     0.4933 |
+|      Clock [MHz]     |  3468.6329 |
+|          CPI         |     0.5126 |
+|    L2 request rate   |     0.0286 |
+|     L2 miss rate     |     0.0062 |
+|     L2 miss ratio    |     0.2152 |
++----------------------+------------+
+
+Region DERIVADA, Group 1: L2CACHE
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.380023 |
+|     call count    |          1 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  |  233990100 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |  232626500 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |  201437900 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |   27066220 |
+|     L2_RQSTS_MISS     |   PMC1  |    8767821 |
++-----------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 3 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.3800 |
+| Runtime unhalted [s] |     0.0801 |
+|      Clock [MHz]     |  3353.5751 |
+|          CPI         |     0.9942 |
+|    L2 request rate   |     0.1157 |
+|     L2 miss rate     |     0.0375 |
+|     L2 miss ratio    |     0.3239 |
++----------------------+------------+
+
+Region JACOBIANA, Group 1: L2CACHE
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.549701 |
+|     call count    |         20 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  | 2511932000 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  | 1174574000 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |  976777300 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |   51554050 |
+|     L2_RQSTS_MISS     |   PMC1  |    8173567 |
++-----------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 3 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.5497 |
+| Runtime unhalted [s] |     0.4045 |
+|      Clock [MHz]     |  3492.0050 |
+|          CPI         |     0.4676 |
+|    L2 request rate   |     0.0205 |
+|     L2 miss rate     |     0.0033 |
+|     L2 miss ratio    |     0.1585 |
++----------------------+------------+
+
+Region GAUSS, Group 1: L2CACHE
++-------------------+------------+
+|    Region Info    | HWThread 3 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.000037 |
+|     call count    |         20 |
++-------------------+------------+
+
++-----------------------+---------+------------+
+|         Event         | Counter | HWThread 3 |
++-----------------------+---------+------------+
+|   INSTR_RETIRED_ANY   |  FIXC0  |     112968 |
+| CPU_CLK_UNHALTED_CORE |  FIXC1  |     301313 |
+|  CPU_CLK_UNHALTED_REF |  FIXC2  |     250712 |
+| L2_TRANS_ALL_REQUESTS |   PMC0  |      36696 |
+|     L2_RQSTS_MISS     |   PMC1  |      11224 |
++-----------------------+---------+------------+
+
++----------------------+--------------+
+|        Metric        |  HWThread 3  |
++----------------------+--------------+
+|  Runtime (RDTSC) [s] | 3.718085e-05 |
+| Runtime unhalted [s] |       0.0001 |
+|      Clock [MHz]     |    3490.0591 |
+|          CPI         |       2.6672 |
+|    L2 request rate   |       0.3248 |
+|     L2 miss rate     |       0.0994 |
+|     L2 miss ratio    |       0.3059 |
++----------------------+--------------+
+
