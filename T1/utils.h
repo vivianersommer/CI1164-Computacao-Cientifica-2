@@ -18,6 +18,7 @@
 
 #define MAX_NOME 50 //maximo de caracteres para um nome de arquivo de saida
 #define MAX 300 //maximo de caracteres permitidas na linha de uma funcao passada no .dat
+#define MAX_INC 6 //maximo de espaco para alocacao de incognitas deve ser 6 pois sera no maximo x4096
 
 //cada bag carrega todos os valores de entrada e todos que devem estar na saida referentes a um bloco por vez
 typedef struct{
@@ -43,8 +44,6 @@ void newton(bag *b, FILE*arq2, int cont_bag);
 void anali_function(bag *b, double *x, double *values, char **names, int cont_bag);
 double norma_vetor(bag *b, double *x);
 void analize_jacobiana_x(char*** jacobiana, double* x, char **names, int max_eq, double** values);
-int split (const char *txt, char delim, char ***tokens);
-
 double *eliminacaoGauss(bag *b, double** jacobiana_x, double *invert_x);
 
 #endif // __UTILS_H__

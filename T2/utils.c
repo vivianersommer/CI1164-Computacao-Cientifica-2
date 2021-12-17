@@ -52,31 +52,6 @@ void clean_fgets(char *pos) {
   strtok(pos, "\n");
 }
 
-//algoritmo para repartir as strings coletadas no arquivo de entrada
-int split (const char *txt, char delim, char ***tokens)
-{
-    int *tklen, *t, count = 1;
-    char **arr, *p = (char *) txt;
-
-    while (*p != '\0') if (*p++ == delim) count += 1;
-    t = tklen = calloc (count, sizeof (int));
-    for (p = (char *) txt; *p != '\0'; p++) *p == delim ? *t++ : (*t)++;
-    *tokens = arr = malloc (count * sizeof (char *));
-    t = tklen;
-    p = *arr++ = calloc (*(t++) + 1, sizeof (char *));
-    while (*txt != '\0')
-    {
-        if (*txt == delim)
-        {
-            p = *arr++ = calloc (*(t++) + 1, sizeof (char *));
-            txt++;
-        }
-        else *p++ = *txt++;
-    }
-    free(tklen);
-    return count;
-}
-
 //criacao da jacobiana utilizando as derivadas
 void cria_jacobiana(bag *b, char* jacobiana){ 
   void *f, *f_dv;
@@ -106,8 +81,8 @@ void cria_jacobiana(bag *b, char* jacobiana){
         jacobiana[(i*(b->max_eq*MAX)) + (j*MAX) + z] = str2[z];
       }
     }
+    evaluator_destroy(f);
   }
-  evaluator_destroy(f);
   free(valor_x);
   free(str);
   free(str2);
@@ -128,8 +103,8 @@ void anali_function(bag *b, double *x, double *values, char **incognitas, int co
     assert(f);
     val = evaluator_evaluate(f, b->max_eq, incognitas , x); 
     values[i] = val;
+    evaluator_destroy(f);
   }
-  evaluator_destroy(f);
 }
 
 //calcula da norma do vetor como no video
@@ -172,10 +147,9 @@ void analize_jacobiana_x(char* jacobiana, double* x, char **incognitas, int max_
       for(int z = 0; z < MAX; z++){
         jacobiana[(i*(max_eq*MAX)) + (j*MAX) + z] = str[z];
       }
-
+      evaluator_destroy(f);
     }
   }
-  evaluator_destroy(f);
   free(str);
 
   LIKWID_MARKER_STOP("JACOBIANA");
@@ -226,7 +200,6 @@ double *eliminacaoGauss(bag *b, double* jacobiana_x, double *invert_x){
 }
 
 void newton (bag *b, FILE* arq2, int cont_bag){
-   
     //alocacoes dinamicas para os vetores e matrizes usados
     double *x = b->x0; // valor calculado na iteração anterior x1,x2,x3,... (x0)
     double *delta = malloc((b->max_eq) * sizeof(double)); // valor calculado na iteração atual para x1,x2,x3,...
@@ -240,10 +213,10 @@ void newton (bag *b, FILE* arq2, int cont_bag){
     int prox_i = 0;
     
     // incognitas não foi otimizado para vetor, pois MATHEVAL - evaluator_evaluate espera um char ** como entrada
-    char **incognitas = malloc(MAX * sizeof(char*));  // incognitas = [x1, x2, x3, ..]
+    char **incognitas = malloc(b->max_eq * sizeof(char*));  // incognitas = [x1, x2, x3, ..]
     int coef=0;
     for(int j=0; j< b->max_eq; j++){
-      incognitas[j] = malloc(MAX * sizeof(char));
+      incognitas[j] = malloc(MAX_INC * sizeof(char));
     }
     for(int w=0; w<b->max_eq; w++){  
       coef = w+1;
@@ -252,15 +225,8 @@ void newton (bag *b, FILE* arq2, int cont_bag){
     // -------------------------------------------------------------------------------------------------------------
     
     // COL= b->max_eq   LIN= b->max_eq  Z= MAX
-    // jacobiana[ i * COL + j * LIN + Z]
+    // jacobiana[ (i*(LIN*COL)) + (j*COL) + z ]
     char *jacobiana = calloc(b->max_eq * b->max_eq * MAX, sizeof(char));
-    /*for(int i=0; i<b->max_eq; i++){
-      for(int j=0; j<b->max_eq; j++){
-        for (int z=0; z< MAX; z++){
-          jacobiana[(i*(b->max_eq*MAX)) + (j*MAX) + z] = ' ';
-        }
-      }
-    }*/
 
     LIKWID_MARKER_START("NEWTON");
     //"falhando graciosamente"
@@ -270,9 +236,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
 
     b->tderivadas = timestamp();
     LIKWID_MARKER_START("DERIVADA");
-    printf("ENTREI NA DERIVADA\n");
     cria_jacobiana(b, jacobiana); //crio matriz jacobiana e calculo o tempo
-    printf("SAI DA DERIVADA\n");
     LIKWID_MARKER_STOP("DERIVADA");
     b->tderivadas = timestamp() - b->tderivadas;
 
@@ -292,9 +256,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
 
       // jacobiana(x) e calculo do tempo da mesma
       double tjacobina = timestamp();
-      printf("ENTREI NA ANALIZE_JACOBIANA\n");
       analize_jacobiana_x(jacobiana, x, incognitas, b->max_eq, jacobiana_x);   
-      printf("SAI DA ANALIZE_JACOBIANA\n");
       b->tjacobiana = b->tjacobiana + (timestamp() - tjacobina);
       
       // -f(x)
@@ -304,9 +266,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
 
       // jacobiana(x) * incognitas = - f(x) => SL
       double tsl = timestamp();
-      printf("\nEntrei no Gauss\n");
       delta = eliminacaoGauss(b, jacobiana_x, invert_x);
-      printf("Sai do Gauss\n");
       b->tsl = b->tsl + (timestamp() - tsl);
         
       //novos x que virao de delta + x
@@ -326,6 +286,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
 
     //FIM DO LOOP DAS ITERACOES---------------------------------------------------------------------------
     LIKWID_MARKER_STOP("NEWTON");
+
     //confeir se devo seguir com a iteracao
     if(norma_vetor(b, values) < b->epsilon){
       return;
@@ -343,8 +304,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
       fprintf(arq2,"x%d = %f\n", inter , x[s]);
       inter++;
     }
-
-
+    
     //free em todo mundo
     free(b->x0);
     free(delta);

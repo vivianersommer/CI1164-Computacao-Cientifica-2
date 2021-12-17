@@ -1121,9 +1121,9 @@ x48 = -0.665798
 x49 = -0.596035
 x50 = -0.416412
 ###########
-# Tempo Total: 840.841064
-# Tempo Derivadas: 285.444092
-# Tempo Jacobiana: 534.208496
-# Tempo SL: 5.370361
+# Tempo Total: 810.579102
+# Tempo Derivadas: 308.756836
+# Tempo Jacobiana: 468.498047
+# Tempo SL: 5.475830
 ###########
 

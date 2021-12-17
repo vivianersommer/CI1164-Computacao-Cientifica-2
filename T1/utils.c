@@ -53,32 +53,6 @@ void clean_fgets(char *pos) {
   strtok(pos, "\n");
 }
 
-//algoritmo para repartir as strings coletadas no arquivo de entrada
-int split (const char *txt, char delim, char ***tokens)
-{
-    int *tklen, *t, count = 1;
-    char **arr, *p = (char *) txt;
-
-    while (*p != '\0') if (*p++ == delim) count += 1;
-    t = tklen = calloc (count, sizeof (int));
-    for (p = (char *) txt; *p != '\0'; p++) *p == delim ? *t++ : (*t)++;
-    *tokens = arr = malloc (count * sizeof (char *));
-    t = tklen;
-    p = *arr++ = calloc (*(t++) + 1, sizeof (char *));
-    while (*txt != '\0')
-    {
-        if (*txt == delim)
-        {
-            p = *arr++ = calloc (*(t++) + 1, sizeof (char *));
-            txt++;
-        }
-        else *p++ = *txt++;
-    }
-    free (tklen);
-    return count;
-}
-
-
 //criacao da jacobiana utilizando as derivadas
 void cria_jacobiana(bag *b, char***jacobiana){ 
   void *f, *f_dv;
@@ -97,8 +71,8 @@ void cria_jacobiana(bag *b, char***jacobiana){
       assert(evaluator_get_string(f_dv));
       jacobiana[i][j] = evaluator_get_string(f_dv); //passamos a funcao como string pra jacobiana
     }
+    evaluator_destroy(f);
   }
-  evaluator_destroy(f);
   free(f_dv);
   free(valor_x);
 }
@@ -114,9 +88,8 @@ void anali_function(bag *b, double *x, double *values, char **names, int cont_ba
     assert(f);
     val = evaluator_evaluate(f, b->max_eq, names , x); 
     values[i] = val;
+    evaluator_destroy(f);
   }
-  
-  evaluator_destroy(f);
 }
 
 //calcula da norma do vetor como no video
@@ -143,9 +116,9 @@ void analize_jacobiana_x(char*** jacobiana, double* x, char **names, int max_eq,
       f = evaluator_create(jacobiana[i][j]); //utilizamos as funções de cálculo de funções definidas pela biblioteca MATHEVAL
       val = evaluator_evaluate(f, max_eq, names , x); 
       values[i][j] = val; //guardando valores resultantes do evaluate com o uso do x
+      evaluator_destroy(f);
     }
   }
-  evaluator_destroy(f);
 
   LIKWID_MARKER_STOP("JACOBIANA");
 
@@ -232,23 +205,22 @@ void newton (bag *b, FILE* arq2, int cont_bag){
     double *values = malloc((b->max_eq) * sizeof(double)); //valores resultado das funcoes
     double *invert_x = malloc((b->max_eq) * sizeof(double)); //x invertido -f(x)
 
-    printf("CHEGUEI\n");
     double **jacobiana_x = malloc((b->max_eq) * sizeof(double*)); //matriz jacobiana apos valores de x  
     for(int s=0; s< b->max_eq; s++){
       jacobiana_x[s] = malloc((b->max_eq) * sizeof(double));
     }
-    printf("SAI\n");
-    char **incognitas = malloc(MAX * sizeof(char*));  // incognitas = [x1, x2, x3, ..]
+
+    char **incognitas = malloc(b->max_eq * sizeof(char*));  // incognitas = [x1, x2, x3, ..]
     for(int j=0; j< b->max_eq; j++){
-      incognitas[j] = malloc(MAX * sizeof(char));
+      incognitas[j] = malloc(MAX_INC * sizeof(char));
     }
-    printf("CHEGUEI INC\n");
+
     int coef=0;
     for(int w=0; w<b->max_eq; w++){  
       coef = w+1;
       sprintf(incognitas[w], "x%i", coef); // incognitas = [x1, x2, x3, ..]
     }
-    printf("SAI INC\n");
+
     char ***jacobiana  = (char ***) malloc(sizeof(char**) * b->max_eq); //matriz 3d jacobiana, cada posicao i,j uma string
     for(int i = 0; i < b->max_eq; i++){
       jacobiana[i] = (char **) malloc(sizeof(char*) * b->max_eq);  
@@ -266,9 +238,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
   
     b->tderivadas = timestamp();
     LIKWID_MARKER_START("DERIVADAS");
-       printf("CHEGUEI DERIVADA\n");
     cria_jacobiana(b, jacobiana); //crio matriz jacobiana e calculo o tempo
-        printf("SAI DERIVADA\n");
     LIKWID_MARKER_STOP("DERIVADAS");
     b->tderivadas = timestamp() - b->tderivadas;
  
@@ -283,7 +253,6 @@ void newton (bag *b, FILE* arq2, int cont_bag){
         fprintf(arq2, "x%d = %f\n", inter , x[s]);
         inter++;
       }
-    
       //utiliza valores de x nas funcoes para calcular os resultados
       anali_function(b, x, values, incognitas, cont_bag);
       //confeir se devo seguir com a iteracao
@@ -294,7 +263,7 @@ void newton (bag *b, FILE* arq2, int cont_bag){
 
       // jacobiana(x) e calculo do tempo da mesma
       double tjacobina = timestamp();
-      analize_jacobiana_x(jacobiana, x, incognitas, b->max_eq, jacobiana_x);   
+      analize_jacobiana_x(jacobiana, x, incognitas, b->max_eq, jacobiana_x);  
       b->tjacobiana = b->tjacobiana + (timestamp() - tjacobina);
       // -f(x)
       for(int m = 0; m< b->max_eq; m++){

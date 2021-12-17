@@ -2837,9 +2837,9 @@ x126 = -0.665798
 x127 = -0.596035
 x128 = -0.416412
 ###########
-# Tempo Total: 5731.635010
-# Tempo Derivadas: 1889.699951
-# Tempo Jacobiana: 3795.830078
-# Tempo SL: 4.293457
+# Tempo Total: 4999.649170
+# Tempo Derivadas: 1816.927979
+# Tempo Jacobiana: 3122.689941
+# Tempo SL: 4.050781
 ###########
 

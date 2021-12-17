@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for N in 10
+for N in 200
 #32 50 64 100 128 200 250 256 300 400 512 600 1000 1024 2000 2048 3000 4096
 do
 	echo $N
@@ -14,5 +14,5 @@ do
 	do
 		echo -n "-1 "
 	done
- 	echo -e "\n0\n20"
+ 	echo -e "\n0 20"
 done

@@ -120,10 +120,10 @@ x8 = 1.000000
 x9 = 1.000000
 x10 = 1.000000
 ###########
-# Tempo Total: 46.974121
-# Tempo Derivadas: 23.686035
-# Tempo Jacobiana: 18.123291
-# Tempo SL: 1.741943
+# Tempo Total: 78.577881
+# Tempo Derivadas: 36.074951
+# Tempo Jacobiana: 16.195801
+# Tempo SL: 2.273438
 ###########
 
 20
@@ -358,10 +358,10 @@ x18 = 1.000000
 x19 = 1.000000
 x20 = 1.000000
 ###########
-# Tempo Total: 164.119873
-# Tempo Derivadas: 97.130127
-# Tempo Jacobiana: 60.120361
-# Tempo SL: 1.679199
+# Tempo Total: 167.652100
+# Tempo Derivadas: 93.944824
+# Tempo Jacobiana: 65.214844
+# Tempo SL: 2.193115
 ###########
 
 30
@@ -706,10 +706,10 @@ x28 = 1.000000
 x29 = 1.000000
 x30 = 1.000000
 ###########
-# Tempo Total: 349.644043
-# Tempo Derivadas: 209.496094
-# Tempo Jacobiana: 130.631836
-# Tempo SL: 1.734863
+# Tempo Total: 366.742920
+# Tempo Derivadas: 218.699951
+# Tempo Jacobiana: 136.217773
+# Tempo SL: 2.430664
 ###########
 
 20
@@ -839,10 +839,10 @@ x18 = -0.665798
 x19 = -0.596035
 x20 = -0.416412
 ###########
-# Tempo Total: 70.702881
-# Tempo Derivadas: 47.276855
-# Tempo Jacobiana: 18.962402
-# Tempo SL: 0.787842
+# Tempo Total: 70.958984
+# Tempo Derivadas: 50.456055
+# Tempo Jacobiana: 15.656982
+# Tempo SL: 0.976318
 ###########
 
 30
@@ -1032,10 +1032,10 @@ x28 = -0.665798
 x29 = -0.596035
 x30 = -0.416412
 ###########
-# Tempo Total: 154.119141
-# Tempo Derivadas: 105.766846
-# Tempo Jacobiana: 42.074951
-# Tempo SL: 0.747803
+# Tempo Total: 151.969971
+# Tempo Derivadas: 103.167969
+# Tempo Jacobiana: 40.718018
+# Tempo SL: 1.411133
 ###########
 
 3
@@ -1087,10 +1087,10 @@ x1 = 0.011929
 x2 = 1.459335
 x3 = 1.628736
 ###########
-# Tempo Total: 5.853027
-# Tempo Derivadas: 0.770996
-# Tempo Jacobiana: 2.609863
-# Tempo SL: 1.708740
+# Tempo Total: 6.295898
+# Tempo Derivadas: 0.734131
+# Tempo Jacobiana: 2.670410
+# Tempo SL: 1.885742
 ###########
 
 3
@@ -1142,9 +1142,9 @@ x1 = -1.186499
 x2 = 1.967919
 x3 = 2.318580
 ###########
-# Tempo Total: 7.150879
-# Tempo Derivadas: 1.104980
-# Tempo Jacobiana: 3.147461
-# Tempo SL: 1.943848
+# Tempo Total: 7.135986
+# Tempo Derivadas: 0.598877
+# Tempo Jacobiana: 3.346436
+# Tempo SL: 2.190186
 ###########
 

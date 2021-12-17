@@ -725,9 +725,9 @@ x30 = -0.665798
 x31 = -0.596035
 x32 = -0.416412
 ###########
-# Tempo Total: 348.152100
-# Tempo Derivadas: 115.644043
-# Tempo Jacobiana: 218.342285
-# Tempo SL: 4.425293
+# Tempo Total: 340.503906
+# Tempo Derivadas: 128.070068
+# Tempo Jacobiana: 196.978516
+# Tempo SL: 4.292480
 ###########
 

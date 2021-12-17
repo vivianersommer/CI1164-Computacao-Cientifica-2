@@ -3,17 +3,20 @@ import subprocess
 import pandas as pd
 
 
-N = [10 , 32, 50, 64, 100, 128] 
-#200, 250, 256, 300, 400, 512, 600, 1000, 1024, 2000, 2048, 3000, 4096]
+N = [10 , 32, 50, 64] 
+#100, 128, 200, 250, 256, 300] 
+#400, 512, 600, 1000, 1024, 2000, 2048, 3000, 4096]
 
 print("Compilando T1 ...")
 if not os.path.exists("../vods18vrs18/T1/newtonSNL"):
     os.chdir("../vods18vrs18/T1/")
     os.system("make avx")
 
+os.chdir("../")
+
 print("Compilando T2 ...")
 if not os.path.exists("../vods18vrs18/T2/newtonSNL"):
-    os.chdir("../vods18vrs18/T2/")
+    os.chdir("../vods18vrs18/T2")
     os.system("make avx")
 
 if os.path.isdir("./sl"):
@@ -25,6 +28,7 @@ if os.path.isdir("./csvs"):
     os.system("rmdir csvs")
 
 os.system("mkdir csvs")
+os.chdir("../")
 
 time_normal1 = []
 time_normal2 = []
@@ -527,4 +531,10 @@ os.system("gnuplot-qt -persist -s -e 'reset; \
 #---------------------------------------------------------------------------------------------------------
 
                     
-                          
+os.chdir("../vods18vrs18/T1")
+os.system("make purge")
+
+os.chdir("../")
+
+os.chdir("../vods18vrs18/T2")
+os.system("make purge")                          

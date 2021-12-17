@@ -5,109 +5,91 @@ CPU clock:	2.90 GHz
 --------------------------------------------------------------------------------
 ENTREI PARA BAG 0
 MAXIMO: 32
-EPSILON = 0.000000
+X0: 
+-1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 
+EPSILON = 0.000000e+00
 ITERACAO = 20
 ENTREI NO NEWTON
 ENTREI NA DERIVADA
 SAI DA DERIVADA
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 ENTREI NA ANALIZE_JACOBIANA
 SAI DA ANALIZE_JACOBIANA
-
 Entrei no Gauss
 Sai do Gauss
 SAI DO NEWTON
@@ -117,131 +99,131 @@ Region NEWTON, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.345209 |
+| RDTSC Runtime [s] |   0.335769 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  | 1090822000 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  511388800 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  425303100 |
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1525301000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  699863100 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  582830400 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     218168 |
-| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      21291 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     198928 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |        160 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3452 |
-| Runtime unhalted [s] |     0.1761 |
-|      Clock [MHz]     |  3491.7560 |
-|          CPI         |     0.4688 |
-|     DP [MFLOP/s]     |     0.8787 |
-|   AVX DP [MFLOP/s]   |     0.2467 |
-|   Packed [MUOPS/s]   |     0.0617 |
-|   Scalar [MUOPS/s]   |     0.6320 |
-|  Vectorization ratio |     8.8913 |
+|  Runtime (RDTSC) [s] |     0.3358 |
+| Runtime unhalted [s] |     0.2410 |
+|      Clock [MHz]     |  3486.8497 |
+|          CPI         |     0.4588 |
+|     DP [MFLOP/s]     |     0.5944 |
+|   AVX DP [MFLOP/s]   |     0.0019 |
+|   Packed [MUOPS/s]   |     0.0005 |
+|   Scalar [MUOPS/s]   |     0.5925 |
+|  Vectorization ratio |     0.0804 |
 +----------------------+------------+
 
 Region DERIVADA, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.115421 |
+| RDTSC Runtime [s] |   0.127803 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  |   55944180 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   41431240 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   34456320 |
+|             INSTR_RETIRED_ANY            |  FIXC0  |   56484460 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   48051480 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   40748690 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       2058 |
-| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |         32 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       2728 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1154 |
-| Runtime unhalted [s] |     0.0143 |
-|      Clock [MHz]     |  3491.8073 |
-|          CPI         |     0.7406 |
-|     DP [MFLOP/s]     |     0.0189 |
-|   AVX DP [MFLOP/s]   |     0.0011 |
-|   Packed [MUOPS/s]   |     0.0003 |
-|   Scalar [MUOPS/s]   |     0.0178 |
-|  Vectorization ratio |     1.5311 |
+|  Runtime (RDTSC) [s] |     0.1278 |
+| Runtime unhalted [s] |     0.0165 |
+|      Clock [MHz]     |  3424.1710 |
+|          CPI         |     0.8507 |
+|     DP [MFLOP/s]     |     0.0213 |
+|   AVX DP [MFLOP/s]   |          0 |
+|   Packed [MUOPS/s]   |          0 |
+|   Scalar [MUOPS/s]   |     0.0213 |
+|  Vectorization ratio |          0 |
 +----------------------+------------+
 
 Region JACOBIANA, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.213238 |
+| RDTSC Runtime [s] |   0.192102 |
 |     call count    |         20 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  | 1004173000 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  454288400 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  377810200 |
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1425457000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  629687800 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  523677600 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     204939 |
-| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |      20459 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     185617 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2132 |
-| Runtime unhalted [s] |     0.1564 |
-|      Clock [MHz]     |  3491.7987 |
-|          CPI         |     0.4524 |
-|     DP [MFLOP/s]     |     1.3449 |
-|   AVX DP [MFLOP/s]   |     0.3838 |
-|   Packed [MUOPS/s]   |     0.0959 |
-|   Scalar [MUOPS/s]   |     0.9611 |
-|  Vectorization ratio |     9.0768 |
+|  Runtime (RDTSC) [s] |     0.1921 |
+| Runtime unhalted [s] |     0.2169 |
+|      Clock [MHz]     |  3491.5929 |
+|          CPI         |     0.4417 |
+|     DP [MFLOP/s]     |     0.9662 |
+|   AVX DP [MFLOP/s]   |          0 |
+|   Packed [MUOPS/s]   |          0 |
+|   Scalar [MUOPS/s]   |     0.9662 |
+|  Vectorization ratio |          0 |
 +----------------------+------------+
 
 Region GAUSS, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.000024 |
+| RDTSC Runtime [s] |   0.000014 |
 |     call count    |         20 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  |     102946 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |     271264 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |     224939 |
+|             INSTR_RETIRED_ANY            |  FIXC0  |     109512 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |     279754 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |     232925 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       5180 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       5206 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
 +------------------------------------------+---------+------------+
 
 +----------------------+--------------+
 |        Metric        |  HWThread 3  |
 +----------------------+--------------+
-|  Runtime (RDTSC) [s] | 2.361981e-05 |
+|  Runtime (RDTSC) [s] | 1.445236e-05 |
 | Runtime unhalted [s] |       0.0001 |
-|      Clock [MHz]     |    3502.0201 |
-|          CPI         |       2.6350 |
-|     DP [MFLOP/s]     |     219.3074 |
+|      Clock [MHz]     |    3487.5667 |
+|          CPI         |       2.5546 |
+|     DP [MFLOP/s]     |     360.2180 |
 |   AVX DP [MFLOP/s]   |            0 |
 |   Packed [MUOPS/s]   |            0 |
-|   Scalar [MUOPS/s]   |     219.3074 |
+|   Scalar [MUOPS/s]   |     360.2180 |
 |  Vectorization ratio |            0 |
 +----------------------+--------------+
 

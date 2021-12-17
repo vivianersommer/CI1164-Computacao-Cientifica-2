@@ -2221,9 +2221,9 @@ x98 = -0.665798
 x99 = -0.596035
 x100 = -0.416412
 ###########
-# Tempo Total: 3411.607910
-# Tempo Derivadas: 1126.151123
-# Tempo Jacobiana: 2250.049316
-# Tempo SL: 4.337158
+# Tempo Total: 3293.630859
+# Tempo Derivadas: 1195.874023
+# Tempo Jacobiana: 2052.570801
+# Tempo SL: 4.461670
 ###########
 

@@ -32,7 +32,6 @@ int main (int argc, char **argv){
 
     int cont_bag = 0;
     while(!feof(arq)){
-        printf("ENTREI PRA BAG %i\n", cont_bag);
         bag *b = malloc(sizeof(bag)); //declaracao de ponteiro para a estrutura contendo variaveis de acordo com formato proposto
 
         b->ttotal = 0;
@@ -43,13 +42,8 @@ int main (int argc, char **argv){
         b->ttotal = timestamp();
 
 
-        // b->max_eq ------------------------------------------------------------------------------------------------------------------------
-        /*char max_eq[MAX];
-        fgets(max_eq, MAX, arq); 
-        clean_fgets(max_eq);*/
-        fscanf(arq, "%i\n", &b->max_eq);
-        printf("DIMENSAO: %i\n", b->max_eq);
-        //b->max_eq = atoi(max_eq);
+        // b->max_eq -----------------------------------------------------------------------------------------------------------------------
+        fscanf(arq, "%i", &b->max_eq);
         // ----------------------------------------------------------------------------------------------------------------------------------
 
         // b->eq ----------------------------------------------------------------------------------------------------------------------------
@@ -79,42 +73,18 @@ int main (int argc, char **argv){
 
 
         // b->x0 -------------------------------------------------------------------------------------------------------------------------------
-        b->x0 = malloc((b->max_eq+1) * sizeof(double)); 
-        char* x0 = malloc((b->max_eq*7) * sizeof(char));
-
-        fgets(x0, (b->max_eq*7), arq);
-
-        if(x0 == NULL){
-            fgets(x0, (b->max_eq*7), arq);
-        }
-
-        char **tokens;
-        int count, i;
-        const char *str = x0;
-        count = split(str, ' ', &tokens);
-        printf("cheguei x0\n");
-        for (i = 0; i < count; i++){
-            b->x0[i] = atof(tokens[i]);
-            free(tokens[i]);
-        }
-        printf("sai x0\n");
-        free(x0);
+        b->x0 = malloc((b->max_eq) * sizeof(double)); 
+        for(int i=0; i<b->max_eq; i++){
+            fscanf(arq,"%le",&b->x0[i]);
+         }
         // -------------------------------------------------------------------------------------------------------------------------------------
 
         // b->epsilon --------------------------------------------------------------------------------------------------------------------------
-        /*char ep[30];
-        fgets(ep, 30, arq);
-        b->epsilon = atof(ep);*/
-        fscanf(arq, "%le\n", &b->epsilon);
-        printf("EPSILON = %le\n", b->epsilon);
+        fscanf(arq, "%le", &b->epsilon);
         // -------------------------------------------------------------------------------------------------------------------------------------
 
         // b->max_iter -------------------------------------------------------------------------------------------------------------------------
-        char max_iter[MAX];
-        fgets(max_iter, MAX, arq); //ler do arquivo dat maximo de equacoes possiveis
-        clean_fgets(max_iter);
-        b->max_iter = atoi(max_iter);
-        printf("ITERACAO = %i\n", b->max_iter);
+        fscanf(arq, "%i", &b->max_iter);
         // -------------------------------------------------------------------------------------------------------------------------------------
 
          //"falhando graciosamente"
@@ -130,14 +100,12 @@ int main (int argc, char **argv){
             f = evaluator_create(b->eq[i]);
             assert(f);
             fprintf(arq2,"%s = 0\n", evaluator_get_string(f));
+            evaluator_destroy(f);
         }
-        evaluator_destroy(f);
         // -------------------------------------------------------------------------------------------------------------------------------------
 
         // Método de Newton. -------------------------------------------------------------------------------------------------------------------
-        printf("cheguei newton\n");
         newton(b, arq2, cont_bag);
-        printf("sai newton\n");
         
         b->ttotal = timestamp() - b->ttotal;
 
@@ -153,12 +121,14 @@ int main (int argc, char **argv){
         fprintf(arq2, "\n");     
         // -------------------------------------------------------------------------------------------------------------------------------------
 
+        char aux[10];
+        fgets(aux, 10, arq);
         fgetc(arq); // ler \n que sobrou
+        
         //free em todo mundo
         for(int c=0; c<b->max_eq; c++)
             free(b->eq[c]);
         free(b);
-        printf("SAI DA BAG %i\n", cont_bag);
         cont_bag++; 
     }
     // -----------------------------------------------------------------------------------------------------------------------------------------

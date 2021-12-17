@@ -1429,9 +1429,9 @@ x62 = -0.665798
 x63 = -0.596035
 x64 = -0.416412
 ###########
-# Tempo Total: 1397.316162
-# Tempo Derivadas: 490.216064
-# Tempo Jacobiana: 882.979004
-# Tempo SL: 4.166016
+# Tempo Total: 1382.895996
+# Tempo Derivadas: 528.069092
+# Tempo Jacobiana: 828.331055
+# Tempo SL: 4.140137
 ###########
 

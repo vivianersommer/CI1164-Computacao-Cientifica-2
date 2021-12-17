@@ -241,9 +241,9 @@ x8 = -0.665797
 x9 = -0.596035
 x10 = -0.416412
 ###########
-# Tempo Total: 45.781982
-# Tempo Derivadas: 12.840088
-# Tempo Jacobiana: 25.699951
-# Tempo SL: 4.105225
+# Tempo Total: 87.725098
+# Tempo Derivadas: 41.683838
+# Tempo Jacobiana: 33.664307
+# Tempo SL: 5.844482
 ###########
 

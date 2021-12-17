@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for N in 200
+for N in 100
 #10 32 50 64 100 128 200 250 256 300 400 512 600 1000 1024 2000 2048 3000 4096
 do
 	echo $N
@@ -14,10 +14,6 @@ do
 	do
 		echo -n "-1 "
 	done
-	if [ $N -eq 128 ]
-	then
- 		echo -e "\n0\n20"
-	else
-		echo -e "\n0\n20\n"
-	fi
+ 		echo -e "\n0 20"
+
 done

@@ -13,8 +13,8 @@
 
 int main (int argc, char **argv){
 
-    //ler dados de sistemas.dat -------------------------------------------------------------------------------------------------------------
     LIKWID_MARKER_INIT;
+    //ler dados de sistemas.dat -------------------------------------------------------------------------------------------------------------
     FILE *arq, *arq2;
     arq = stdin;
 
@@ -30,7 +30,6 @@ int main (int argc, char **argv){
 
     int cont_bag = 0;
     while(!feof(arq)){
-        printf("ENTREI PARA BAG %i\n", cont_bag);
         bag *b = malloc(sizeof(bag)); //declaracao de ponteiro para a estrutura contendo variaveis de acordo com formato proposto
 
         b->ttotal = 0;
@@ -42,13 +41,7 @@ int main (int argc, char **argv){
 
 
         // b->max_eq ------------------------------------------------------------------------------------------------------------------------
-        /*char *max_eq = malloc(MAX_NOME * sizeof(char));
-        fgets(max_eq, MAX_NOME, arq); 
-        clean_fgets(max_eq);
-        b->max_eq = atoi(max_eq);
-        free(max_eq);*/
-        fscanf(arq, "%i\n", &b->max_eq);
-        printf("MAXIMO: %i\n", b->max_eq);
+        fscanf(arq, "%i", &b->max_eq);
         // ----------------------------------------------------------------------------------------------------------------------------------
 
         // b->eq ----------------------------------------------------------------------------------------------------------------------------
@@ -87,42 +80,18 @@ int main (int argc, char **argv){
 
 
         // b->x0 -------------------------------------------------------------------------------------------------------------------------------
-        b->x0 = malloc((b->max_eq+1) * sizeof(double)); 
-        char* x0 = malloc((b->max_eq*7) * sizeof(char));
-
-        fgets(x0, (b->max_eq*7), arq);
-
-        if(x0 == NULL){
-            fgets(x0, (b->max_eq*7), arq);
-        }
-
-        char **tokens;
-        int count, i;
-        const char *str = x0;
-
-        count = split(str, ' ', &tokens);
-        for (i = 0; i < count; i++){
-            b->x0[i] = atof(tokens[i]);
-            free(tokens[i]);
-        }
-        free(x0);
+        b->x0 = malloc((b->max_eq) * sizeof(double)); 
+        for(int i=0; i<b->max_eq; i++){
+            fscanf(arq,"%le",&b->x0[i]);
+         }
         // -------------------------------------------------------------------------------------------------------------------------------------
 
         // b->epsilon --------------------------------------------------------------------------------------------------------------------------
-        /*char *ep = malloc(30 * sizeof(char));
-        fgets(ep, 30, arq);
-        b->epsilon = atof(ep);*/
-        fscanf(arq, "%le\n", &b->epsilon);
-        printf("EPSILON = %f\n", b->epsilon);
+        fscanf(arq, "%le", &b->epsilon);
         // -------------------------------------------------------------------------------------------------------------------------------------
 
         // b->max_iter -------------------------------------------------------------------------------------------------------------------------
-        char *max_iter = malloc(MAX_NOME * sizeof(char));
-        fgets(max_iter, MAX_NOME, arq); //ler do arquivo dat maximo de equacoes possiveis
-        clean_fgets(max_iter);
-        b->max_iter = atoi(max_iter);
-        free(max_iter);
-        printf("ITERACAO = %i\n", b->max_iter);
+        fscanf(arq, "%i", &b->max_iter);
         // -------------------------------------------------------------------------------------------------------------------------------------
 
          //"falhando graciosamente"
@@ -143,14 +112,11 @@ int main (int argc, char **argv){
             assert(f);
             fprintf(arq2,"%s = 0\n", evaluator_get_string(f));
         }
-
         evaluator_destroy(f);
         // -------------------------------------------------------------------------------------------------------------------------------------
 
         // Método de Newton. -------------------------------------------------------------------------------------------------------------------
-        printf("ENTREI NO NEWTON\n");
         newton(b, arq2, cont_bag);
-        printf("SAI DO NEWTON\n");
         b->ttotal = timestamp() - b->ttotal;
 
         // -------------------------------------------------------------------------------------------------------------------------------------
@@ -164,19 +130,20 @@ int main (int argc, char **argv){
         fprintf(arq2, "\n");     
         // -------------------------------------------------------------------------------------------------------------------------------------
 
+        char aux[10];
+        fgets(aux, 10, arq);
         fgetc(arq); // ler \n que sobrou
 
         //free em todo mundo
         free(b->eq);
         free(b);
-        printf("SAI PARA BAG %i\n", cont_bag);
         cont_bag++; 
     }
     // -----------------------------------------------------------------------------------------------------------------------------------------
 
     //fechar arquivos
+    LIKWID_MARKER_CLOSE;
     fclose(arq);
     fclose(arq2);
-    LIKWID_MARKER_CLOSE;
-    return 0;
+    
 }

@@ -5,8 +5,8 @@ CPU clock:	2.90 GHz
 --------------------------------------------------------------------------------
 ENTREI PRA BAG 0
 DIMENSAO: 64
-cheguei x0
-sai x0
+X0: 
+-1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 -1.000000e+00 
 EPSILON = 0.000000e+00
 ITERACAO = 20
 cheguei newton
@@ -16,6 +16,126 @@ CHEGUEI INC
 SAI INC
 CHEGUEI DERIVADA
 SAI DERIVADA
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
+CHEGUEI ANALIZE
+SAI ANALIZE
+CHEGUEI ANALIZE JACOBIANA
+SAI ANALIZE JACOBIANA
+ENTREI GAUSS
+SAI GAUSS
 sai newton
 SAI DA BAG 0
 --------------------------------------------------------------------------------
@@ -23,65 +143,65 @@ Region NEWTON, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   1.381092 |
+| RDTSC Runtime [s] |   1.369968 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  | 4480565000 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2122795000 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 1765410000 |
+|             INSTR_RETIRED_ANY            |  FIXC0  | 6387596000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2968875000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2470243000 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1048049 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1056434 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |     832320 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     1.3811 |
-| Runtime unhalted [s] |     0.7310 |
-|      Clock [MHz]     |  3491.6771 |
-|          CPI         |     0.4738 |
-|     DP [MFLOP/s]     |     3.1695 |
-|   AVX DP [MFLOP/s]   |     2.4106 |
-|   Packed [MUOPS/s]   |     0.6027 |
-|   Scalar [MUOPS/s]   |     0.7589 |
-|  Vectorization ratio |    44.2637 |
+|  Runtime (RDTSC) [s] |     1.3700 |
+| Runtime unhalted [s] |     1.0224 |
+|      Clock [MHz]     |  3490.1438 |
+|          CPI         |     0.4648 |
+|     DP [MFLOP/s]     |     3.2013 |
+|   AVX DP [MFLOP/s]   |     2.4302 |
+|   Packed [MUOPS/s]   |     0.6075 |
+|   Scalar [MUOPS/s]   |     0.7711 |
+|  Vectorization ratio |    44.0671 |
 +----------------------+------------+
 
 Region DERIVADAS, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.472578 |
+| RDTSC Runtime [s] |   0.539210 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  |  218804800 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  164787000 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  137032600 |
+|             INSTR_RETIRED_ANY            |  FIXC0  |  296919600 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  275306800 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  229396800 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       8138 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |      11140 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.4726 |
-| Runtime unhalted [s] |     0.0567 |
-|      Clock [MHz]     |  3491.9712 |
-|          CPI         |     0.7531 |
-|     DP [MFLOP/s]     |     0.0172 |
+|  Runtime (RDTSC) [s] |     0.5392 |
+| Runtime unhalted [s] |     0.0948 |
+|      Clock [MHz]     |  3485.1435 |
+|          CPI         |     0.9272 |
+|     DP [MFLOP/s]     |     0.0207 |
 |   AVX DP [MFLOP/s]   |          0 |
 |   Packed [MUOPS/s]   |          0 |
-|   Scalar [MUOPS/s]   |     0.0172 |
+|   Scalar [MUOPS/s]   |     0.0207 |
 |  Vectorization ratio |          0 |
 +----------------------+------------+
 
@@ -89,32 +209,32 @@ Region JACOBIANA, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.882023 |
+| RDTSC Runtime [s] |   0.804800 |
 |     call count    |         20 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  | 4173938000 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 1916615000 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 1593952000 |
+|             INSTR_RETIRED_ANY            |  FIXC0  | 5975478000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2638012000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2194640000 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
-|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     737440 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     742823 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
 +------------------------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.8820 |
-| Runtime unhalted [s] |     0.6600 |
-|      Clock [MHz]     |  3491.6544 |
-|          CPI         |     0.4592 |
-|     DP [MFLOP/s]     |     0.8361 |
+|  Runtime (RDTSC) [s] |     0.8048 |
+| Runtime unhalted [s] |     0.9084 |
+|      Clock [MHz]     |  3490.6359 |
+|          CPI         |     0.4415 |
+|     DP [MFLOP/s]     |     0.9230 |
 |   AVX DP [MFLOP/s]   |          0 |
 |   Packed [MUOPS/s]   |          0 |
-|   Scalar [MUOPS/s]   |     0.8361 |
+|   Scalar [MUOPS/s]   |     0.9230 |
 |  Vectorization ratio |          0 |
 +----------------------+------------+
 
@@ -122,16 +242,16 @@ Region GAUSS, Group 1: FLOPS_DP
 +-------------------+------------+
 |    Region Info    | HWThread 3 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.002872 |
+| RDTSC Runtime [s] |   0.002849 |
 |     call count    |         20 |
 +-------------------+------------+
 
 +------------------------------------------+---------+------------+
 |                   Event                  | Counter | HWThread 3 |
 +------------------------------------------+---------+------------+
-|             INSTR_RETIRED_ANY            |  FIXC0  |   23927550 |
-|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   10021750 |
-|           CPU_CLK_UNHALTED_REF           |  FIXC2  |    8335932 |
+|             INSTR_RETIRED_ANY            |  FIXC0  |   23927520 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   10140990 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |    8435999 |
 | FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
 |    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     290100 |
 | FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |     832000 |
@@ -140,14 +260,14 @@ Region GAUSS, Group 1: FLOPS_DP
 +----------------------+------------+
 |        Metric        | HWThread 3 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0029 |
+|  Runtime (RDTSC) [s] |     0.0028 |
 | Runtime unhalted [s] |     0.0035 |
-|      Clock [MHz]     |  3491.0897 |
-|          CPI         |     0.4188 |
-|     DP [MFLOP/s]     |  1259.8881 |
-|   AVX DP [MFLOP/s]   |  1158.8700 |
-|   Packed [MUOPS/s]   |   289.7175 |
-|   Scalar [MUOPS/s]   |   101.0181 |
+|      Clock [MHz]     |  3490.8800 |
+|          CPI         |     0.4238 |
+|     DP [MFLOP/s]     |  1269.8648 |
+|   AVX DP [MFLOP/s]   |  1168.0468 |
+|   Packed [MUOPS/s]   |   292.0117 |
+|   Scalar [MUOPS/s]   |   101.8180 |
 |  Vectorization ratio |    74.1467 |
 +----------------------+------------+
 
